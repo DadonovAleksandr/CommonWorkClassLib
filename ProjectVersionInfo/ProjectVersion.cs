@@ -44,9 +44,11 @@ public class ProjectVersion
     /// </summary>
     public string FullVersion => $"{_version.Major}.{_version.Minor}.{_version.Build}.{_version.Revision}";
 
+    public static DateTime ReferenceDateTime => new DateTime(2000, 1, 1);
+
     private DateTime GetBuildDateTime()
     {
-        var buildDateTime = new DateTime(2000, 1, 1)
+        var buildDateTime = ReferenceDateTime
                 .Add(new TimeSpan(
                     TimeSpan.TicksPerDay * _version.Build +                 // days since 1 January 2000
                     TimeSpan.TicksPerSecond * 2 * _version.Revision));      // seconds since midnight, (multiply by 2 to get original)
