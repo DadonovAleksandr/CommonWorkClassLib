@@ -5,3 +5,4 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
 [assembly: InternalsVisibleTo("ProjectVersionInfo.Tests")]
+[assembly: InternalsVisibleTo("VersionChanger.Tests")]
